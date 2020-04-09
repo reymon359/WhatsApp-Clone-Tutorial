@@ -101,7 +101,7 @@ Finally we can decide on our tables;
         * `VARCHAR`
     * `username` ->
         * `VARCHAR` - `UNIQUE`
-        * `UNIQUE` means this value can exist in this table only once. We use this feature because `username` must be unique in users for each user
+        * `UNIQUE` means this value can exist in this table only once. We use this feature because `username` must be unique in users for each user (Unique can also be a combination of a number of columns)
     * `password` ->
         * `VARCHAR`
     * `picture` ->
@@ -349,3 +349,11 @@ We should update tests to use SQL instead of in-memory database.
 We can remove all the stuff related to in-memory database now.
 
 {{{diffStep 11.9 module="server" files="db"}}}
+
+
+TODO: 
+
+* SELECT DISTINCT ON (unique for the expression inside, and you can combine a few - as expression)
+not with , between them
+
+* Window functions to do accumulative sum
